@@ -1,0 +1,11 @@
+# test
+# mixin1
+mixin Mixin1 {
+    mixin1: String
+    mixin11: String
+}
+
+# mixin2
+mixin Mixin2 {
+    mixin2: String
+}

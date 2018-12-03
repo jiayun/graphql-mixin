@@ -1,0 +1,5 @@
+type Test {
+    @mixin Mixin1
+    id: ID!
+    @mixin Mixin2
+}
