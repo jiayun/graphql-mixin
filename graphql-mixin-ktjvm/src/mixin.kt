@@ -21,7 +21,12 @@ fun readAndCombineFiles(filenames: Array<String>): String {
 
 fun extractMixinDefinitions(schema: String): Pair<String, Map<String, String>> {
     val map = HashMap<String, String>()
-    val regex = """(^#.*?\n)*\s*mixin\s*(\w*)\s*\{\s(^[^}]*)\s^}""".toRegex(RegexOption.MULTILINE)
+    val regex = """(^#.*?\n)*\s*mixin\s*(\w*)\s*\{\s(^[^}].*?)\s^}""".toRegex(
+        setOf(
+            RegexOption.MULTILINE,
+            RegexOption.DOT_MATCHES_ALL
+        )
+    )
 
     var matchResult = regex.find(schema)
 

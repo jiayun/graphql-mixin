@@ -1,11 +1,16 @@
 # test
 # mixin1
 mixin Mixin1 {
+    # comment1
     mixin1: String
+    # comment11
     mixin11: String
 }
 
 # mixin2
 mixin Mixin2 {
+    # test {t.c}
     mixin2: String
+    # test {t.c}
+    mixin22: String
 }
